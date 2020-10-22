@@ -18,12 +18,10 @@ Point2D create_point() {
     return tmp;
 }
 
+// Pass by reference (don't forget &)
 void initialize_in_place(Point2D& point) {
     point.x = rand() % 10;  
-    point.y = rand() % 10; 
-
-    std::cout << "Value of X: " << point.x << std::endl;
-    std::cout << "Value of Y: " << point.y << std::endl;
+    point.y = rand() % 10;
 }
 
 int main() {
@@ -31,8 +29,8 @@ int main() {
     Point2D mypoint = create_point();
 
     // Print its contents
-    // std::cout << "Value of X: " << mypoint.x << std::endl;
-    // std::cout << "Value of Y: " << mypoint.y << std::endl;
+    std::cout << "Value of X: " << mypoint.x << std::endl;
+    std::cout << "Value of Y: " << mypoint.y << std::endl;
 
     // Declare a variable with our struct
     Point2D empty_point;
